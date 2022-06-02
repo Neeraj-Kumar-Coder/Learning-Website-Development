@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Part 1</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    #top {
+        text-align: center;
+        font-size: 50px;
+        font-family: monospace;
+        color: blue;
+    }
+
+    #top::before {
+        content: ".";
+        color: red;
+        text-align: center;
+        display: block;
+        background-color: red;
+    }
+
+    #top::after {
+        content: ".";
+        color: red;
+        text-align: center;
+        display: block;
+        background-color: red;
+    }
+
+    p {
+        font-size: 20px;
+        position: relative;
+    }
+
+    a[tip]::before {
+        content: attr(tip);
+        position: absolute;
+        bottom: 25%;
+        padding: 3px;
+        background-color: grey;
+        color: white;
+        transform: scale(0);
+        transition: transform ease 150ms, bottom ease 150ms;
+    }
+
+    a[tip]:hover::before {
+        transform: scale(1);
+        bottom: 100%;
+    }
+
+    #bottom {
+        text-align: center;
+        font-size: 50px;
+        position: relative;
+        display: inline-block;
+        color: green;
+    }
+
+    #bottom::before,
+    #bottom::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+    }
+
+    #bottom::before {
+        background-color: white;
+        left: -10%;
+        right: -10%;
+        z-index: -1;
+    }
+
+    #bottom::after {
+        background-color: blue;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -2;
+    }
+
+    p::before {
+        content: "\21D2";
+    }
+</style>
+
+<body>
+    <h1 id="top">This is a heading</h1>
+    <p>Lorem ipsum <a href="#" tip="This is a tip">dolor sit amet</a> consectetur, adipisicing elit. Vitae ad minus
+        aperiam esse provident
+        expedita itaque
+        accusamus vel, aliquam, est aspernatur. Esse labore, sit consectetur ex laboriosam dignissimos totam quisquam.
+    </p>
+    <h1 id="bottom">This is another heading</h1>
+    <p>This is a data in points</p>
+    <p>This is a data in points</p>
+    <p>This is a data in points</p>
+    <p>This is a data in points</p>
+    <p>This is a data in points</p>
+</body>
+
+</html>

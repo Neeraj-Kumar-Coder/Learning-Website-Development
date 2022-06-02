@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision Of Concepts</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        font-size: 16px;
+        /* Changing this will affect rem units*/
+    }
+
+    /* em Container */
+
+    .container--em {
+        font-size: 10px;
+        /* Changing this will affect em units*/
+    }
+
+    .container--em h1 {
+        text-align: center;
+        margin-top: 0.5em;
+        color: blue;
+        font-size: 2em;
+    }
+
+    .container--em h1::before,
+    .container--em h1::after {
+        color: red;
+        font-size: 2em;
+    }
+
+    .container--em h1::before {
+        content: open-quote;
+    }
+
+    .container--em h1::after {
+        content: close-quote;
+    }
+
+    /* em Container [END] */
+
+
+
+    /* rem Container */
+
+    .container--rem {
+        font-size: 10px;
+        /* Changing this will affect em units*/
+    }
+
+    .container--rem h1 {
+        text-align: center;
+        margin-top: 0.625rem;
+        color: blue;
+        font-size: 2rem;
+    }
+
+    .container--rem h1::before,
+    .container--rem h1::after {
+        color: red;
+        font-size: 2rem;
+    }
+
+    .container--rem h1::before {
+        content: open-quote;
+    }
+
+    .container--rem h1::after {
+        content: close-quote;
+    }
+
+    /* rem Container [END] */
+
+    p[only-it] {
+        text-align: center;
+        color: blue;
+        opacity: 0.5;
+        font-size: 1em;
+    }
+
+    p {
+        text-align: center;
+        color: blue;
+        font-size: 1em;
+    }
+
+    /* Compounding using em */
+
+    .compounding {
+        font-size: 15px;
+    }
+
+    .compounding div {
+        font-size: 2em;
+    }
+
+    /* Compounding using em [END] */
+
+    .btn {
+        border: 2px solid blue;
+        font-size: 2rem;
+        padding: 10px;
+        display: inline-block;
+        /*All elements that are position:absolute; are automatically treated as display:block, since that's the only logical display mode for absolute positioning.*/
+        border-radius: 0.7rem;
+        text-decoration: none;
+        color: blue;
+
+        /* centering */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        /* centering [END] */
+    }
+
+    .btn:hover {
+        background-color: blue;
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="container--em">
+        <h1>REVISING ALL THE CONCEPTS OF HTML AND CSS</h1>
+    </div>
+    <div class="container--rem">
+        <h1>REVISING ALL THE CONCEPTS OF HTML AND CSS</h1>
+    </div>
+    <p only-it="this only">em units are just taking refrence from the closest parent element and due to this there is a
+        major
+        problem of COMPOUNDING in em units. To fix this, rems are introduced which takes refrence from the root element
+        {html}
+    </p>
+    <div class="compounding">
+        <p>Compounding 0</p>
+        <div class="1">
+            <p>Compounding 1</p>
+            <div class="2">
+                <p>Compounding 2</p>
+                <div class="3">
+                    <p>Compounding 3</p>
+                    <div class="4">
+                        <p>Compounding 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn">Click Here</a>
+</body>
+
+<script>
+    let button = document.getElementsByClassName("btn")[0];
+    let count = 0;
+    button.addEventListener("click", function () {
+        if (count == 0)
+            document.body.style.backgroundColor = "pink", button.innerHTML = "Keep Changing", count++;
+        else if (count == 1)
+            document.body.style.backgroundColor = "yellow", button.innerHTML = "Keep Changing", count++;
+        else if (count == 2)
+            document.body.style.backgroundColor = "orange", button.innerHTML = "Keep Changing", count++;
+        else if (count == 3)
+            document.body.style.backgroundColor = "black", button.innerHTML = "Keep Changing", count++;
+        else
+            document.body.style.backgroundColor = "white", button.innerHTML = "Click Here", count = 0;
+    });
+</script>
+
+</html>

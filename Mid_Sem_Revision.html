@@ -1,0 +1,320 @@
+<!-- DOCTYPE tells the web browser that which version of HTML this webpage is written in -->
+<!DOCTYPE html>
+<!-- html tells the browser that this page will be formatted in HTML and an optionally the language of the webpage content -->
+<html lang="en">
+<!-- The head element surrounds all the "behind the scene" elements of a web document -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepts Revision</title>
+</head>
+<!-- The body element surrounds all the actual content of the web page that is going to be displayed -->
+
+<style>
+    .font-size-20 {
+        font-size: 20px;
+    }
+
+    h1 {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    p {
+        background-color: blueviolet;
+        color: white;
+        padding: 3px;
+    }
+
+    h3 {
+        background-color: tomato;
+        color: yellow;
+    }
+
+    ul {
+        list-style-type: circle;
+    }
+
+    ol {
+        list-style-type: lower-roman;
+    }
+
+    li {
+        font-style: italic;
+    }
+
+    table,
+    tr,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .container {
+        height: 500px;
+        width: 500px;
+        border-top: 3px solid red;
+        border-right: 3px dashed blue;
+        border-bottom: 3px dotted green;
+        border-left: 3px groove orange;
+    }
+
+    .red-div {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+    }
+
+    .leftfloat {
+        float: left;
+    }
+
+    .green-div {
+        height: 100px;
+        width: 100px;
+        background-color: green;
+    }
+
+    #legend-link:link {
+        color: black;
+        font-size: 5rem;
+        font-family: monospace;
+    }
+
+    #legend-link:visited {
+        color: purple;
+    }
+
+    #legend-link:hover {
+        color: orange;
+    }
+
+    #legend-link:active {
+        color: red;
+    }
+
+    .new-container {
+        height: 500px;
+        width: 500px;
+        margin: 0 auto;
+        background-color: #12AF30;
+    }
+
+    .web-safe-font {
+        font-family: Garamond;
+    }
+
+    .sticky-btn {
+        position: fixed;
+        width: 200px;
+        bottom: 1%;
+        right: 1%;
+        text-align: center;
+    }
+
+    .sticky-btn:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition-property: transform;
+        transition-duration: 250ms;
+        transition-timing-function: ease-in-out;
+    }
+
+    #dark-switch {
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        font-family: sans-serif;
+        padding: 0.5rem;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+    #frameHere {
+        margin: 25px;
+    }
+</style>
+
+<body>
+    <h1>Revising the concepts of HTML CSS and JavaScript for the Mid-Semester examinations</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe earum voluptas omnis reprehenderit ullam quod
+        doloremque pariatur esse cumque voluptatem quaerat quae, praesentium laborum fugiat fugit neque quia quibusdam?
+        Nisi?</p>
+
+    <h3>This is an unordered list</h3>
+    <ul>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+    </ul>
+
+    <h3>This is an ordered list</h3>
+    <ol>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+    </ol>
+
+    <a href="https://www.google.com/" target="_blank">External Link</a>
+    <a href="Maldives.html" target="_blank">Internal Link</a>
+    <a href="#tableishere">Bookmark Link</a>
+    <a href="mailto:nk7075034@gmail.com" target="_blank">Email Link</a>
+    <img src="https://live.staticflickr.com/3805/12902494773_9be5023a16_h.jpg" alt="nature image">
+    <a href="https://www.facebook.com/" target="_blank"><img src="Facebook.png" alt="facebook"></a>
+
+    <table id="tableishere">
+        <caption>This is a table</caption>
+        <thead>
+            <tr>
+                <th>Serial Number</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Marital Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Neeraj Kumar</td>
+                <td>20</td>
+                <td>Single</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Rinki Rani</td>
+                <td>23</td>
+                <td>Single</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="container"></div>
+
+    <div class="red-div leftfloat"></div>
+    <div class="green-div leftfloat"></div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque dolore doloremque, quo voluptatem veniam dolores
+        adipisci ipsa porro. Nemo molestias eos unde, optio officia laboriosam. Voluptate vitae fugit magnam iure?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, repellendus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, repellendus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, repellendus.</p>
+
+    <a href="https://www.google.co.in" target="_blank" id="legend-link">This is a Legendary Link</a>
+    <p class="font-size-20">This is a special character set: &Nscr;&Escr;&Escr;&Rscr;&Ascr;&Jscr;</p>
+    <p class="font-size-20">The chemical formula for water is H <sub>2</sub> O and it is O(N <sup>2</sup>)</p>
+    <div class="new-container"></div>
+    <p class="web-safe-font font-size-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, vitae.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LXb3EKWsInQ" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <form action="#">
+        <fieldset>
+            <legend style="text-align: center; font-size: larger;">This is a sample form</legend>
+            <select name="dropdown" id="dropdownid">
+                <option value="op1">Option 1</option>
+                <option value="op2">Option 2</option>
+                <option value="op3" selected>Option 3</option>
+                <option value="op4">Option 4</option>
+                <option value="op5">Option 5</option>
+            </select>
+            <button type="submit">All is well</button>
+        </fieldset>
+    </form>
+
+    <!-- <div class="sticky-btn"><span id="dark-switch">Switch to dark mode</span></div> -->
+    <div class="sticky-btn" id="dark-switch">Switch to dark mode</div>
+    <p>MESSAGES WILL BE DISPLAYED HERE</p>
+    <div id="line"></div>
+
+    <iframe id="frameHere" src="Fonts.html" frameborder="0" height="300px" width="500px"></iframe>
+    <iframe id="frameHere" src="Fonts.html" frameborder="0" height="300px" width="500px"></iframe>
+    <iframe id="frameHere" src="Fonts.html" frameborder="0" height="300px" width="500px"></iframe>
+
+    <button onclick="showDate()">SHOW ME THE DATE RIGHT NOW</button>
+</body>
+
+<script>
+    console.log("This is JavaScript right here!!");
+    let darkModeBtn = document.getElementById("dark-switch");
+    darkModeBtn.addEventListener("click", function () {
+        if (darkModeBtn.innerText == 'Switch to dark mode') {
+            darkModeBtn.style.color = "black";
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+            darkModeBtn.innerText = "Switch to light mode";
+            darkModeBtn.style.backgroundColor = "white";
+
+        }
+        else {
+            document.body.style.backgroundColor = "white";
+            document.body.style.color = "black";
+            darkModeBtn.innerText = "Switch to dark mode";
+            darkModeBtn.style.backgroundColor = "black";
+            darkModeBtn.style.color = "white";
+        }
+    });
+
+    let x = 9;
+    // Not equal is either value or type
+    if (x !== "9") {
+        console.log("Inside if condition");
+    }
+    // Not equal in value
+    else if (x != "9") {
+        console.log("Inside else-if condition");
+    }
+    else {
+        console.log("Inside else condition");
+    }
+
+    let randomNumber = Math.PI;
+    console.log(randomNumber);
+    console.log(Math.floor((Math.random() * 100)));
+
+    for (let index = 0; index < 10; index++) {
+        console.log(index);
+    }
+
+    let myArray = new Array();
+    myArray.push(5);
+    myArray.push(51);
+    myArray.push(52);
+    myArray.push(53);
+    myArray.unshift(99);
+    console.log(myArray);
+    console.log(`The first element of the array is ${myArray.shift()}`);
+    console.log(`The last element of the array is ${myArray.pop()}`);
+    myArray.sort();
+    console.log(myArray);
+
+    let joined_string = myArray.join("-");
+    console.log(joined_string);
+    console.log(document.doctype.name);
+    console.log(document.inputEncoding);
+
+    let line = document.getElementById("line");
+    let newElement = document.createElement("div");
+    newElement.setAttribute("id", "divByJS");
+    newElement.style.height = "100px";
+    newElement.style.width = "100px";
+    newElement.style.backgroundColor = "grey";
+
+    line.append(newElement);
+    let addedJSElement = document.getElementById("divByJS");
+    addedJSElement.appendChild(document.createTextNode("This is a new message added by JS"));
+    addedJSElement.removeChild(addedJSElement.firstChild);
+    addedJSElement.appendChild(document.createTextNode("This is a new2 message added by JS"));
+
+    function showDate() {
+        alert(`Todays date is => ${new Date()}`);
+    }
+</script>
+
+</html>

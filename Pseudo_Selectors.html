@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors</title>
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        color: white;
+    }
+
+    ol li:nth-child(2) {
+        background-color: blue;
+    }
+
+    ol li:nth-child(even) {
+        background-color: orange;
+    }
+
+    ol li:nth-child(odd) {
+        background-color: pink;
+    }
+
+    input[type] {
+        background-color: red;
+    }
+
+    input[type='number'] {
+        background-color: grey;
+    }
+
+    div>ol {
+        margin-bottom: 50px;
+    }
+
+    div+ol {
+        border: 5px solid green;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <ol type="i" class="lst">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 3</li>
+        </ol>
+        <form action="#">
+            <input type="text" name="Name" id="Name" placeholder="Enter your name here">
+            <input type="number" name="Number" id="Number" placeholder="Enter your number here">
+            Gender: <input type="radio" name="Gender" id="gndr" placeholder="Gender">
+        </form>
+    </div>
+    <ol type="1" class="lst">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 3</li>
+    </ol>
+</body>
+
+</html>

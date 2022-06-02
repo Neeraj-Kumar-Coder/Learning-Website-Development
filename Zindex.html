@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box {
+        border: 3px solid black;
+        margin: 3px;
+        height: 100px;
+        width: 100px;
+    }
+
+    #box-1 {
+        background-color: red;
+        position: relative;
+        top: 50px;
+        z-index: 4;
+    }
+
+    #box-2 {
+        background-color: yellow;
+        position: relative;
+        top: 25px;
+        z-index: 3;
+    }
+
+    #box-3 {
+        background-color: blue;
+        position: relative;
+        top: 5px;
+        z-index: 2;
+    }
+
+    #box-4 {
+        background-color: green;
+        position: relative;
+        bottom: 15px;
+        z-index: 1;
+    }
+
+    @media only screen and (max-width:500px) {
+        .container {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @media only screen and (min-width:500px) and (max-width:1000px) {
+        .container {
+            flex-flow: row;
+            flex-direction: row-reverse;
+        }
+
+        h1::before {
+            text-align: center;
+            display: block;
+            margin: auto;
+            content: "flex-flow: row; flex-direction: row-reverse;";
+        }
+    }
+
+    @media only screen and (min-width:1000px) {
+        .container::after {
+            content: "Z-INDEX ON COMMAND";
+            font-size: 20px;
+            color: blue;
+        }
+    }
+</style>
+
+<body>
+    <h1></h1>
+    <div class="container">
+        <div class="box" id="box-1"></div>
+        <div class="box" id="box-2"></div>
+        <div class="box" id="box-3"></div>
+        <div class="box" id="box-4"></div>
+    </div>
+</body>
+
+</html>

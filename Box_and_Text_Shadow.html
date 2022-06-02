@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box And Text Shadow</title>
+</head>
+
+<style>
+    .container {
+        display: flex;
+    }
+
+    .box {
+        border: 2px solid black;
+        padding: 5px;
+        margin: 5px;
+        background-color: blue;
+        color: white;
+        /* shadow: offset-x offset-y blur-radius spread-radius */
+        box-shadow: 3px 3px 5px red;
+        text-shadow: 3px 3px 5px orange;
+    }
+
+    .glowbox {
+        border: 2px solid red;
+        padding: 5px;
+        margin: 5px;
+        height: 300px;
+        width: 300px;
+        margin: 50px auto;
+        background-color: rgb(136, 37, 1);
+        box-shadow: 0px 0px 10px 7px orangered;
+        color: red;
+        text-shadow: 0px 0px 5px 2px red;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box" id="box-1">
+            <h2>This is a box</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos excepturi quidem quas vel, amet qui,
+                sint enim repellendus voluptate velit, harum consequatur exercitationem. Adipisci voluptatibus illum
+                neque itaque odio quis?</p>
+        </div>
+        <div class="box" id="box-2">
+            <h2>This is a box</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos excepturi quidem quas vel, amet qui,
+                sint enim repellendus voluptate velit, harum consequatur exercitationem. Adipisci voluptatibus illum
+                neque itaque odio quis?</p>
+        </div>
+        <div class="box" id="box-3">
+            <h2>This is a box</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos excepturi quidem quas vel, amet qui,
+                sint enim repellendus voluptate velit, harum consequatur exercitationem. Adipisci voluptatibus illum
+                neque itaque odio quis?</p>
+        </div>
+    </div>
+    <div class="glowbox">
+        <h1>This is a glowing box</h1>
+    </div>
+</body>
+
+</html>

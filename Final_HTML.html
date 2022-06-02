@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML till now</title>
+</head>
+
+<body>
+    <h1>Creating this website by using the concepts learned till now</h1>
+    <h2>Net worth of this website &dollar;100M</h2>
+    <img src="Welcome.jpg" alt="Image not found">
+    <ol type="1">
+        Some Quick Reference Links:
+        <li><a href="https://www.google.com" target="_blank">Go to google</a></li>
+        <li><a href="https://www.geeksforgeeks.org" target="_blank">Go to geeksforgeeks</a></li>
+        <li><a href="https://www.youtube.com" target="_blank">Go to youtube</a></li>
+    </ol>
+    <!-- Form -->
+    <h3>Fill this form</h3>
+    <form action="backend.php">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <div>
+            Gender:
+            <label for="male">Male</label>
+            <input type="radio" name="myGender" id="male">
+            <label for="female">Female</label>
+            <input type="radio" name="myGender" id="female">
+            <label for="others">Others</label>
+            <input type="radio" name="myGender" id="others">
+        </div>
+        <br>
+        <div>
+            <label for="dob">Date of Birth: </label>
+            <input type="date" name="dateOfBirth" id="dob">
+        </div>
+        <br>
+        <div>
+            <label for="age">Age: </label>
+            <input type="number" name="age" id="age">
+        </div>
+        <br>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+        </div>
+        <br>
+        <div>
+            <label for="mobile">Mobile: </label>
+            <input type="number" name="mobile" id="mobile">
+        </div>
+        <br>
+        <div>
+            <label for="prof">Profession: </label>
+            <input type="text" name="prof" id="prof">
+        </div>
+        <br>
+        <div>
+            <label for="cllg">College: </label>
+            <select name="college" id="cllg">
+                <option value="NSUT">Netaji Subhas University of Technology</option>
+                <option value="DTU">Delhi Technological University</option>
+                <option value="IIT" selected>Indian Institute of Technology</option>
+                <option value="DU">Delhi University</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="doc">Upload any file: </label>
+            <input type="file" name="file" id="doc">
+        </div>
+        <br>
+        <div>
+            <label for="myself">Write about yourself: </label>
+            <br>
+            <textarea name="self" id="myself" cols="50" rows="10"></textarea>
+        </div>
+        <br>
+        <details>
+            <summary>Click here to view TnC</summary>
+            I agree to all the terms and conditions of this form. I allow my data to be shared to the author will full
+            liablity to myself
+        </details>
+        <div>
+            <label for="chbx">I agree: </label>
+            <input type="checkbox" name="box" id="chbx">
+        </div>
+        <div>
+            <label for="chkbx">I have checked my details and it's correct </label>
+            <input type="checkbox" name="button" id="chkbx">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset Form">
+        </div>
+    </form>
+    <hr>
+
+    <!-- Table -->
+    <div>
+        <span><strong>Latest Form Submissions</strong></span>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Neeraj Kumar</td>
+                    <td>20</td>
+                    <td>82xxxxxxxx</td>
+                    <td>nk7xxxxxx@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Rahul Sharma</td>
+                    <td>18</td>
+                    <td>92xxxxxxxx</td>
+                    <td>rahxxxxxxx@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Harry</td>
+                    <td>22</td>
+                    <td>86xxxxxxxx</td>
+                    <td>harxxxxx@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+</body>
+
+</html>

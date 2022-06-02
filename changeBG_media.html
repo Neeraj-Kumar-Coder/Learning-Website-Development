@@ -1,0 +1,65 @@
+<!-- changing the background-image using media queries -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Background With Size Of Screen</title>
+</head>
+
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        justify-content: center;
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        font-family: cursive;
+    }
+
+    @media only screen and (max-width:600px) {
+        .container {
+            background-image: url('/Projects/Project_1/images/documentation.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    @media only screen and (min-width:600px) and (max-width:1000px) {
+        .container {
+            background-image: url('/Projects/Project_1/images/Background.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    @media only screen and (min-width:1000px) {
+        .container {
+            background-image: url('/Nature_Background.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <span>THIS IS A CHANGING BACKGROUND</span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+h1 {
+    text-align: center;
+    color: red;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(74, 210, 255);
+    border: 5px solid blue;
+}
+
+#mainPara {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    text-align: center;
+    color: crimson;
+}
+
+#intro {
+    font-family: 'Cinzel Decorative', cursive;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color: lightblue;
+    border: lightblue;
+    color: orangered;
+}
+
+#aboutMe {
+    font-family: cursive;
+    text-align: center;
+    font-weight: bold;
+    color: orange;
+}
+
+span {
+    font-family: 'Patrick Hand', cursive;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+}

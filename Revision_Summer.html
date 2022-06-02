@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container>h1 {
+        text-align: center;
+        padding: 0.5rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: black;
+    }
+
+    .navbar-item {
+        display: flex;
+        align-items: center;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+    }
+
+    .navbar-item>a {
+        display: inline-block;
+        list-style: none;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        font-family: sans-serif;
+        color: white;
+        text-decoration: none;
+        transition: all 200ms linear;
+        border-radius: 0.5rem;
+    }
+
+    .navbar-item>a:hover {
+        background-color: grey;
+        transform: scale(1.5);
+    }
+
+    .navbar-item>img {
+        display: inline-block;
+        width: 3rem;
+        padding: 0.5rem;
+        filter: invert(1);
+        cursor: pointer;
+        transition: all 150ms linear;
+    }
+
+    .navbar-item>img:hover {
+        transform: scale(1.1);
+    }
+
+    .navbar-item>img:active {
+        transform: scale(0.9);
+    }
+
+    #hamburger {
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+    }
+
+    #cat-img {
+        transform: translateX(-100%);
+        transition: all 3s ease-out;
+    }
+
+    @keyframes slide {
+        from {
+            transform: translateX(0%);
+        }
+
+        to {
+            transform: translateX(35vw);
+        }
+    }
+
+    @keyframes slideback {
+        from {
+            transform: translateX(35vw);
+        }
+
+        to {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes fade {
+        form {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        to {
+            transform: scale(0);
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Revision of HTML, CSS and JavaScript</h1>
+        <nav>
+            <ul class="navbar">
+                <li class="navbar-item" id="hamburger"> <img src="https://openclipart.org/image/2000px/221605"
+                        alt="hamburger-menu">
+                </li>
+                <li class="navbar-item"> <a href="#"> Home </a> </li>
+                <li class="navbar-item"> <a href="#"> Services </a> </li>
+                <li class="navbar-item"> <a href="#"> About Us </a> </li>
+                <li class="navbar-item"> <a href="#"> Contact Us </a> </li>
+            </ul>
+        </nav>
+        <img id="cat-img"
+            src="https://media.istockphoto.com/photos/funny-winking-kitten-picture-id1267021092?k=20&m=1267021092&s=612x612&w=0&h=yzwxZXklHn5NwDTgKmbq2Ojtg3pga6j8K3oT7lLneAY="
+            alt="cat">
+    </div>
+</body>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const navItems = document.getElementsByClassName("navbar-item");
+    const catImg = document.getElementById("cat-img");
+
+    hamburger.addEventListener("click", () => {
+        for (let i = 1; i < navItems.length; i++) {
+            let element = navItems[i];
+            if (element.style.animationName == "fade") {
+                element.style.animationName = "fadein";
+            }
+            else {
+                element.style.animationName = "fade";
+            }
+        };
+        hamburger.style.display = "flex";
+        if (hamburger.style.animationName == "slide") {
+            hamburger.style.animationName = "slideback";
+            catImg.style.transform = "translateX(-100%)";
+        }
+        else {
+            hamburger.style.animationName = "slide";
+            catImg.style.transform = "translateX(0%)";
+        }
+    });
+</script>
+
+</html>

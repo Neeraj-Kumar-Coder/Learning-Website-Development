@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+</head>
+
+<style>
+    .gridcontainer {
+        display: grid;
+        grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer'
+        ;
+        gap: 3px;
+    }
+
+    .decor {
+        background-color: tomato;
+        border: 2px solid red;
+    }
+
+    #navbar {
+        grid-area: navbar;
+    }
+
+    #section {
+        grid-area: section;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+</style>
+
+<body>
+    <div class="gridcontainer">
+        <div id="navbar" class="decor">HOME SERVICES PRODUCTS ABOUT CONTACT</div>
+        <div id="section" class="decor">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, delectus quis,
+            ut laboriosam ratione rerum expedita earum non ab sed similique veniam voluptatum aliquam obcaecati alias
+            deleniti est aperiam perspiciatis quibusdam! Saepe eius impedit consectetur molestias rem enim, eligendi
+            natus tempore, ducimus sit quisquam voluptatem esse? Quod temporibus saepe cum corporis quo laborum
+            dignissimos ut consectetur quia pariatur aut nulla iste ad reprehenderit, ullam facilis voluptatum fuga
+            aliquid nisi! Dignissimos cum iure placeat aut distinctio, culpa fuga. Voluptatum, quidem quod! Laudantium
+            est ad, quod minima neque voluptatum totam soluta nesciunt perferendis eveniet vitae ducimus consequatur
+            debitis nulla modi, nihil officiis?</div>
+        <div class="decor" id="aside">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem tempora
+            saepe officia. Mollitia eveniet, ut totam amet, tenetur cum, pariatur quia repudiandae quod deleniti maxime
+            nemo explicabo commodi eum! Est.</div>
+        <footer class="decor"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, odio.</span>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Check</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            /* justify-content is used for horizontal direction */
+
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+
+            /* align-items is used for vertical direction */
+
+            /*align-items: center; /* for vertically centre*/
+            /*align-items: stretch; /*vertically even space dega ye*/
+        }
+
+        .box {
+            border: 2px solid red;
+            background-color: orange;
+            margin: 10px;
+            padding: 3px;
+            height: 100px;
+            width: 100px;
+        }
+
+        #box-1 {
+            flex-grow: 2;
+            flex-shrink: 2;
+            flex-basis: 120px;
+        }
+
+        #box-2 {
+            flex-grow: 2;
+            flex-shrink: 2;
+            flex-basis: 120px;
+        }
+
+        #box-3 {
+            flex-grow: 2;
+            flex-shrink: 2;
+            flex-basis: 120px;
+        }
+
+        #box-4 {
+            flex-grow: 2;
+            flex-shrink: 2;
+            flex-basis: 120px;
+        }
+
+        #box-5 {
+            flex-grow: 2;
+            flex-shrink: 2;
+            flex-basis: 120px;
+        }
+
+        #box-6 {
+            flex-grow: 2;
+            flex-shrink: 2;
+            flex-basis: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">This is flex box tutorial</h1>
+    <div class="container">
+        <div class="box" id="box-1">Box one</div>
+        <div class="box" id="box-2">Box two</div>
+        <div class="box" id="box-3">Box three</div>
+        <div class="box" id="box-4">Box four</div>
+        <div class="box" id="box-5">Box five</div>
+        <div class="box" id="box-6">Box six</div>
+    </div>
+</body>
+
+</html>

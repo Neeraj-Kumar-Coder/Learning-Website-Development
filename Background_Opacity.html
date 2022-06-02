@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Opacity</title>
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-weight: bolder;
+        font-size: 30px;
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+        text-align: center;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .container::before {
+        background-image: url('https://source.unsplash.com/collection/190727/1600x900');
+        background-repeat: no-repeat;
+        background-position: center;
+        content: "";
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>THIS IS A HEADING</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, excepturi! Ab illo, laudantium voluptatibus
+            architecto minus consectetur nesciunt, pariatur sapiente praesentium ducimus ex vero iure magnam molestias
+            eius sequi suscipit?</p>
+    </div>
+</body>
+
+</html>

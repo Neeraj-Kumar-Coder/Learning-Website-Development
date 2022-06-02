@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations and Keyframes</title>
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    :root {
+        --wid: 1000px;
+        --hei: 20px;
+    }
+
+    .container {
+        border: 2px solid black;
+        background-color: grey;
+        margin: 10px auto;
+        width: var(--wid);
+        height: var(--hei);
+    }
+
+    .loading {
+        width: 0px;
+        height: var(--hei);
+        background-color: red;
+        animation-name: load;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+    }
+
+    .loading1 {
+        width: 0px;
+        height: var(--hei);
+        background-color: green;
+        animation-name: load;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    .loading2 {
+        width: 0px;
+        height: var(--hei);
+        background-color: blue;
+        animation-name: load;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes load {
+        from {
+            width: 0px;
+        }
+
+        to {
+            width: var(--wid);
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="loading">
+            <div class="loading1">
+                <div class="loading2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

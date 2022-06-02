@@ -1,0 +1,9 @@
+According to the Worldwide Screen Resolution Stats (Jan 2020 – Jan 2021)
+The most commonly used resolutions across mobile, desktop, and tablet are:
+
+1920×1080 (8.89%)
+1366×768 (8.44%)
+360×640 (7.28%)
+414×896 (4.58%)
+1536×864 (3.88%)
+375×667 (3.75%)
