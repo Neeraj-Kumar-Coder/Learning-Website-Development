@@ -20,6 +20,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
+    console.log(`Endpoint hitted = ${req.url} (POST request)`);
     fs.appendFile("Form data.txt", JSON.stringify(req.body) + "\n", () => {
         console.log("Data had been saved successfully");
     });
