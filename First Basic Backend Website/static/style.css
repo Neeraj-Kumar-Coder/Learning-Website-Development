@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-image: url("https://api.time.com/wp-content/uploads/2020/03/gym-coronavirus.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+h1,
+h2 {
+    text-align: center;
+    text-shadow: 0px 0px 5px white;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    padding: 0.5rem;
+}
+
+li {
+    transition: all 150ms linear;
+}
+
+li:hover {
+    opacity: 0.8;
+}
+
+a {
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0rem 1rem;
+    font-size: larger;
+    color: white;
+}
+
+input,
+textarea {
+    display: block;
+    padding: 0.5rem;
+    outline: none;
+    border-radius: 0.5rem;
+    border: 2px solid black;
+    margin: 1rem auto;
+    width: 50%;
+    transition: all 150ms linear;
+}
+
+input:hover,
+textarea:hover {
+    background-color: rgb(250, 250, 250);
+}
+
+input:focus,
+textarea:focus {
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0px 0px 10px 3px rgb(250, 250, 250);
+}
+
+#btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 30%;
+    margin: 1rem auto;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    transition: all 150ms linear;
+}
+
+#btn:hover {
+    background-color: rgb(50, 50, 50);
+}
