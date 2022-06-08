@@ -1,0 +1,18 @@
+{
+  "name": "rock-and-roll",
+  "version": "1.0.0",
+  "description": "A unique dance academy to learn dance of all forms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dance"
+  ],
+  "author": "Neeraj",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "pug": "^3.0.2"
+  }
+}

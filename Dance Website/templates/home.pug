@@ -1,0 +1,29 @@
+extends base.pug
+
+block title
+    title Rock and Roll
+
+block style
+    style
+        include ../static/fonts_used.css
+        include ../static/navbar_footer.css
+        include ../static/home.css
+
+block content
+    section#intro-section
+        h1 Welcome to Rock and Roll
+        h3 Take a chance to dance
+
+    section#mission-section
+        h3 Our mission is to produce best dancers across the world
+        ul
+            li.mission-item Dance the way you like
+            li.mission-item Expert Teachers
+            li.mission-item Regular engagments in dance competitions
+    
+    section#sponser-section
+        h1 Our Sponsers
+        div#sp-div
+            img(src="https://www.nicepng.com/png/full/190-1908217_color-spotify-logo-denon-dra-100sp-network-receiver.png", alt="parle logo", class="splogo", id="logo1")
+            img(src="https://blog.hubspot.com/hs-fs/hubfs/coca-cola-brand-identity-example.png?width=323&name=coca-cola-brand-identity-example.png", alt="parle logo", class="splogo", id="logo2")
+            img(src="https://s3.scoopwhoop.com/anj/logos/392455336.png", alt="parle logo", class="splogo", id="logo3")

@@ -1,0 +1,84 @@
+#intro-section {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-image: url("https://wallpaper.dog/large/5487432.jpg");
+    background-position: 0 -2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#intro-section h1 {
+    font-size: 7rem;
+    font-family: 'Moon Dance', cursive;
+    color: white;
+    text-shadow: 0px 0px 3px white;
+}
+
+#intro-section h3 {
+    font-size: 4rem;
+    font-family: 'Moon Dance', cursive;
+    color: white;
+    text-shadow: 0px 0px 3px white;
+}
+
+#mission-section {
+    background-color: black;
+    padding: 1rem;
+}
+
+#mission-section h3 {
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+#mission-section ul {
+    width: 50vw;
+    margin: auto;
+    padding: 1rem;
+}
+
+.mission-item {
+    font-size: 2rem;
+    font-family: cursive;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+#sponser-section {
+    background-color: black;
+    height: 50vh;
+    text-align: center;
+    padding: 1rem;
+    background-image: url("https://i0.wp.com/blog.inevent.com/wp-content/uploads/2022/01/Event-sponsorship-packages.png?fit=1180%2C570&ssl=1&resize=1280%2C720");
+    background-size: cover;
+    background-position: 0 10rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#sponser-section h1 {
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: black;
+    text-shadow: 0px 0px 7px white;
+}
+
+#sp-div {
+    height: 40vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.splogo {
+    height: 70%;
+}

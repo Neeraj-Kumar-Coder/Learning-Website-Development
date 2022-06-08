@@ -1,0 +1,30 @@
+extends base.pug
+
+block title
+    title Contact Us - Rock and Roll
+
+block style
+    style
+        include ../static/fonts_used.css
+        include ../static/navbar_footer.css
+        include ../static/contact.css
+
+block content
+    div.container
+        h1 We are here to help you
+
+    form(action="/contact", method="POST")
+        input(type="text", name="name", placeholder="Enter your name here", class="form-item")
+        div#gender-div.form-item
+            label(for="male") Male
+            input(type="radio", name="gender", class="gender", id="male")
+            label(for="female") Female
+            input(type="radio", name="gender", class="gender", id="female")
+        input(type="number", name="age", placeholder="Enter your age here", class="form-item")
+        input(type="email", name="email", id="email", placeholder="Enter your email here" class="form-item")
+        textarea(name="address", cols="30", rows="10", placeholder="Enter your address here", class="form-item")
+        textarea(name="concern", cols="30", rows="10", placeholder="Enter your concern here", class="form-item")
+        button(type="submit", id="submit-btn", class="form-item") Reach Us
+    
+    script
+        include ../static/contact.js
