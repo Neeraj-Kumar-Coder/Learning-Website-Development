@@ -22,6 +22,7 @@ app.get("/contact", (req, res) => {
     res.status(200).render("contact.pug", params);
 })
 
+
 // Server
 const port = 80;
 
