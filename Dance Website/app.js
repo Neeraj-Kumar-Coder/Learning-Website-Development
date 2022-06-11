@@ -44,20 +44,20 @@ let Member = mongoose.model("member", memberSchema);
 
 // Endpoints
 app.get("/", (req, res) => {
+    // console.log(`Endpoint hitted = ${req.url}`);
     const params = {};
-    console.log(`Endpoint hitted = ${req.url}`);
     res.status(200).render("home.pug", params);
 });
 
 app.get("/contact", (req, res) => {
+    // console.log(`Endpoint hitted = ${req.url}`);
     const params = {};
-    console.log(`Endpoint hitted = ${req.url}`);
     res.status(200).render("contact.pug", params);
 });
 
 app.post("/contact", (req, res) => {
+    // console.log(`Endpoint hitted = ${req.url} (POST REQUEST)`);
     const params = {};
-    console.log(`Endpoint hitted = ${req.url} (POST REQUEST)`);
     let member = new Member(req.body);
     member.save((err, obj) => {
         if (err) return console.error(err);
