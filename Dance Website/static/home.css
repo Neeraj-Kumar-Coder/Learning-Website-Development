@@ -1,15 +1,13 @@
 #intro-section {
-    background-color: yellow;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 80vh;
     background-image: url("https://wallpaper.dog/large/5487432.jpg");
-    background-position: 0 -2rem;
+    background-position: center -85px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 #intro-section h1 {
