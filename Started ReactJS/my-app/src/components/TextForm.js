@@ -13,9 +13,9 @@ export default function TextForm(props) {
     }
 
     const detailsHandler = () => {
-        setWords(text.length);
-        setCharacters(text.split(" ").length);
-        setReadingTime((text.length * 0.005));
+        setCharacters(text.length);
+        setWords(text.split(" ").length);
+        setReadingTime((text.split(" ").length * 0.005));
         setPrevText(text);
     }
 
@@ -27,15 +27,29 @@ export default function TextForm(props) {
         setText(text.toLowerCase());
     }
 
+    const copyHandler = () => {
+        let more = document.getElementById("more");
+        more.select();
+        navigator.clipboard.writeText(more.value);
+    }
+
+    const spaceHandler = () => {
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "));
+    }
+
     return (
         <>
             <h1>{props.heading}</h1>
             <div className="mb-3">
                 <textarea className="form-control" id="more" rows="7" value={text} onChange={changeHandler}></textarea>
             </div>
-            <button className="btn btn-primary mx-1 my-1" onClick={upperHandler}>Conver to UPPERCASE</button>
-            <button className="btn btn-primary mx-1 my-1" onClick={lowerHandler}>Conver to lowercase</button>
-            <button className="btn btn-primary mx-1 my-1" onClick={detailsHandler}>Get Details</button>
+            <button className="btn border-primary mx-1 my-1" onClick={upperHandler}>Conver to UPPERCASE</button>
+            <button className="btn border-primary mx-1 my-1" onClick={lowerHandler}>Conver to lowercase</button>
+            <button className="btn border-success mx-1 my-1" onClick={spaceHandler}>Remove extra spaces</button>
+            <br />
+            <button className="btn border-success mx-1 my-1" onClick={detailsHandler}>Get Details</button>
+            <button className="btn border-success mx-1 my-1" onClick={copyHandler}>Copy to Clipboard</button>
 
             <div className="container">
                 <h1 className='my-5'>Text Summary</h1>
