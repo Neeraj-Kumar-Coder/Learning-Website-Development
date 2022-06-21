@@ -12,14 +12,26 @@ export default function TextUtil(props) {
     }
 
     const upperHandler = () => {
+        if (text === "") {
+            props.showData("danger", "No text is present! Please enter some of it.");
+            return;
+        }
         setText(text.toUpperCase());
     }
 
     const lowerHandler = () => {
+        if (text === "") {
+            props.showData("danger", "No text is present! Please enter some of it.");
+            return;
+        }
         setText(text.toLowerCase());
     }
 
     const capitalizeHandler = () => {
+        if (text === "") {
+            props.showData("danger", "No text is present! Please enter some of it.");
+            return;
+        }
         let textArr = text.split(" ");
         textArr.forEach(function (ele, index, myThis) {
             myThis[index] = myThis[index].charAt(0).toUpperCase() + myThis[index].slice(1).toLowerCase();
@@ -28,17 +40,30 @@ export default function TextUtil(props) {
     }
 
     const spaceHandler = () => {
+        if (text === "") {
+            props.showData("danger", "No text is present! Please enter some of it.");
+            return;
+        }
         setText(text.split(/[ ]+/g).join(" "));
     }
 
     const copyHander = () => {
         let textArea = document.getElementById("text-here");
-        textArea.select();
-        navigator.clipboard.writeText(textArea.value);
-        props.showData("success", "Text Copied to clipboard!");
+        if (text !== "") {
+            textArea.select();
+            navigator.clipboard.writeText(textArea.value);
+            props.showData("success", "Text Copied to clipboard!");
+        }
+        else {
+            props.showData("danger", "No text is present! Please enter some of it.");
+        }
     }
 
     const detailsHandler = () => {
+        if (text === "") {
+            props.showData("danger", "No text is present! Please enter some of it.");
+            return;
+        }
         let value = text.length;
         setCharacters(value);
         value = text.split(/[ ]+/g).join(" ").split(" ").length;
@@ -47,6 +72,14 @@ export default function TextUtil(props) {
         setReadingTime(value);
     }
 
+    const clearHandler = () => {
+        if (window.confirm("This will clear the text completely!")) {
+            setText("");
+            setCharacters(0);
+            setWords(0);
+            setReadingTime(0);
+        }
+    }
     const getMode = current => current === "black" ? "dark" : "light";
 
     return (
@@ -61,6 +94,7 @@ export default function TextUtil(props) {
                     <button type="button" className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={spaceHandler}>Remove Extra Spaces</button>
                     <button type="button" className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={copyHander}>Copy To Clipboard</button>
                     <button type="button" className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={detailsHandler}>Get Details</button>
+                    <button type="button" className="btn btn-danger mx-1 my-2" onClick={clearHandler}>Clear</button>
                 </div>
             </div>
             <div className="container">
