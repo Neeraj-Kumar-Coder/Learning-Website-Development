@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import "./App.css"
 import Alerts from './components/Alerts'
 import Navbar from './components/Navbar'
 import TextUtil from './components/TextUtil'

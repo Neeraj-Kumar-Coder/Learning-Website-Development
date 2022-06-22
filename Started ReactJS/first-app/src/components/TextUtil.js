@@ -66,7 +66,10 @@ export default function TextUtil(props) {
         }
         let value = text.length;
         setCharacters(value);
-        value = text.split(/[ ]+/g).join(" ").split(" ").length;
+        let temp = text.split(/[ ]+/g).join(" ").split(" ");
+        value = temp.length;
+        if (temp.at(-1) === "")
+            value--;
         setWords(value);
         value *= 0.005;
         setReadingTime(value);
