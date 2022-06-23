@@ -48,15 +48,12 @@ export default function TextUtil(props) {
     }
 
     const copyHander = () => {
-        let textArea = document.getElementById("text-here");
-        if (text !== "") {
-            textArea.select();
-            navigator.clipboard.writeText(textArea.value);
-            props.showData("success", "Text Copied to clipboard!");
-        }
-        else {
+        if (text === "") {
             props.showData("danger", "No text is present! Please enter some of it.");
+            return;
         }
+        navigator.clipboard.writeText(text);
+        props.showData("success", "Text Copied to clipboard!");
     }
 
     const detailsHandler = () => {
@@ -66,7 +63,7 @@ export default function TextUtil(props) {
         }
         let value = text.length;
         setCharacters(value);
-        let temp = text.split(/[ ]+/g).join(" ").split(" ");
+        let temp = text.split(/\s+/g).join(" ").split(" ");
         value = temp.length;
         if (temp.at(-1) === "")
             value--;
