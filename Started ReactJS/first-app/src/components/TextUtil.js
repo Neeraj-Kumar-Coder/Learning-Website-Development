@@ -91,13 +91,13 @@ export default function TextUtil(props) {
                 <div className="mb-3">
                     <h1 className="text-center">{props.heading}</h1>
                     <textarea className="form-control" id="text-here" rows="10" onChange={changeHandler} value={text}></textarea>
-                    <button type="button" className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={upperHandler}>Convert To UPPERCASE</button>
-                    <button type="button" className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={lowerHandler}>Convert To lowercase</button>
-                    <button type="button" className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={capitalizeHandler}>Capitalize Text</button>
-                    <button type="button" className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={spaceHandler}>Remove Extra Spaces</button>
-                    <button type="button" className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={copyHander}>Copy To Clipboard</button>
-                    <button type="button" className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={detailsHandler}>Get Details</button>
-                    <button type="button" className="btn btn-danger mx-1 my-2" onClick={clearHandler}>Clear</button>
+                    <button type="button" disabled={text.length === 0} className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={upperHandler}>Convert To UPPERCASE</button>
+                    <button type="button" disabled={text.length === 0} className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={lowerHandler}>Convert To lowercase</button>
+                    <button type="button" disabled={text.length === 0} className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={capitalizeHandler}>Capitalize Text</button>
+                    <button type="button" disabled={text.length === 0} className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={spaceHandler}>Remove Extra Spaces</button>
+                    <button type="button" disabled={text.length === 0} className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={copyHander}>Copy To Clipboard</button>
+                    <button type="button" disabled={text.length === 0} className={`btn btn-${getMode(props.mode.color)} mx-1 my-2`} onClick={detailsHandler}>Get Details</button>
+                    <button type="button" disabled={text.length === 0} className="btn btn-danger mx-1 my-2" onClick={clearHandler}>Clear</button>
                 </div>
             </div>
             <div className="container">
