@@ -16,7 +16,7 @@ export class NewsSection extends Component {
 
     async componentDidMount() {
         this.setState({ loading: true });
-        const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=b6c492dd282d458e83fa9ece22361081&pageSize=${this.state.pageSize}&page=${this.state.page}`;
+        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=b6c492dd282d458e83fa9ece22361081&pageSize=${this.state.pageSize}&page=${this.state.page}`;
         let data = await fetch(url);
         let parsedData = await data.json();
         this.setState({
@@ -42,7 +42,7 @@ export class NewsSection extends Component {
         this.setState({
             loading: true
         })
-        const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=b6c492dd282d458e83fa9ece22361081&pageSize=${this.state.pageSize}&page=${this.state.page}`;
+        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=b6c492dd282d458e83fa9ece22361081&pageSize=${this.state.pageSize}&page=${this.state.page}`;
         let data = await fetch(url);
         let parsedData = await data.json();
         this.setState({
@@ -56,7 +56,7 @@ export class NewsSection extends Component {
             <>
                 <Spinner loading={this.state.loading} />
                 <div className='container my-3'>
-                    <h1 className="text-center">Top headlines</h1>
+                    <h1 className="text-center my-3">Top headlines</h1>
                     <div className="row">
                         {
                             this.state.articles.map((element) => {
