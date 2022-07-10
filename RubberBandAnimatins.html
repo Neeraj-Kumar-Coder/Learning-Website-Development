@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubber Band Animation</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        user-select: none;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10rem;
+        background-color: black;
+    }
+
+    .popper {
+        display: inline-block;
+        transition: all 0.3s ease-out;
+        font-family: myFont;
+        color: white;
+    }
+
+    .popper:hover {
+        color: aqua;
+    }
+
+    .animateRubberBand {
+        animation: rubberBand 1s ease-out;
+    }
+
+    @keyframes rubberBand {
+        from {
+            transform: scale3d(1, 1, 1);
+        }
+
+        30% {
+            transform: scale3d(1.25, 0.75, 1);
+        }
+
+        40% {
+            transform: scale3d(0.75, 1.25, 1);
+        }
+
+        50% {
+            transform: scale3d(1.15, 0.85, 1);
+        }
+
+        65% {
+            transform: scale3d(0.95, 1.05, 1);
+        }
+
+        75% {
+            transform: scale3d(1.05, 0.95, 1);
+        }
+
+        to {
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    @font-face {
+        font-family: myFont;
+        src: url("EuropaGroteskSH-Med.otf");
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <span class="popper">H</span><span class="popper">i</span><span class="popper">!</span>
+            <br>
+            <span class="popper">I</span><span class="popper">'</span><span class="popper">m</span>
+            <br>
+            <span class="popper">N</span><span class="popper">e</span><span class="popper">e</span><span
+                class="popper">r</span><span class="popper">a</span><span class="popper">j</span>
+        </div>
+    </div>
+</body>
+
+<script>
+    let alphabets = document.getElementsByClassName("popper");
+    Array.from(alphabets).forEach((element) => {
+        element.addEventListener("mouseenter", () => {
+            element.classList.add("animateRubberBand");
+            setTimeout(() => {
+                element.classList.remove("animateRubberBand");
+            }, 1000);
+        });
+    });
+</script>
+
+</html>
