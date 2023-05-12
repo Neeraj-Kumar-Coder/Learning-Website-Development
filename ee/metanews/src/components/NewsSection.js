@@ -76,7 +76,10 @@ export class NewsSection extends Component {
                                         <NewsCard title={element.title ? element.title : `MetaNews - Read More`}
                                             description={element.description ? element.description.slice(0, 100) + "..." : `MetaNews - A news app to fullfill your daily news dose. Read More...`}
                                             urlToImage={element.urlToImage ? element.urlToImage : `https://images.hindustantimes.com/tech/img/2022/06/24/1600x900/_0106ce46-1cc2-11ea-9a0d-a0e38c0c67e3_1656050216463.jpg`}
-                                            url={element.url} />
+                                            url={element.url}
+                                            author={element.author ? element.author : "unknown"}
+                                            date={new Date(element.publishedAt).toGMTString()}
+                                            source={element.source} />
                                     </div>
                                 );
                             })
